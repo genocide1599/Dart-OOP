@@ -42,15 +42,16 @@ class PBfunctions {
   }
 
   void searchContact(String fName, String lName) {
-    Contact? contact = _findContact(fName, lName);
-
-    if (contact != null) {
-      print('--------------------------------------');
-      print('First Name: ${contact.fName}');
-      print('Last Name: ${contact.lName}');
-      print('Phone Number: ${contact.phoneNum}');
-      print('Address: ${contact.address}');
-    } else {
+    try {
+      Contact? contact = _findContact(fName, lName);
+      if (contact != null) {
+        print('--------------------------------------');
+        print('First Name: ${contact.fName}');
+        print('Last Name: ${contact.lName}');
+        print('Phone Number: ${contact.phoneNum}');
+        print('Address: ${contact.address}');
+      }
+    } catch (e) {
       print('Contact not found');
     }
   }

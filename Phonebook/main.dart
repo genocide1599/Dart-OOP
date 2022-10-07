@@ -16,4 +16,6 @@ void main() {
   print('\r\r');
   phoneBook1.searchContact('Janusz', 'Omamalin');
   print('\r\r');
+  phoneBook1.searchContact('janusz', 'Omamalin');
+  print('\r\r');
 }
